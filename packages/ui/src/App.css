@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.appWrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageWrapper {
+  min-height: 100%;
+  flex: 1 0 auto;
+}
+
+.loaderContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  background: rgba(black, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.walletConnectorModal {
+  width: 50vw;
+  max-width: 26rem;
+}
+
+.walletConnectorModal>.modal-content {
+  border-radius: 0.5rem;
+}
+
+.connectorButton {
+  width: 100%;
+  height: 3.7rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.connectorButton>.connectorImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.connectorImage img {
+  width: 100%;
+  height: 100%;
+}

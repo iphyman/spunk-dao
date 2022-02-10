@@ -1,0 +1,18 @@
+{
+  "name": "@spunk-dao/root",
+  "version": "1.0.0",
+  "description": "An open source dao project on algorand blockchain.",
+  "repository": "https://github.com/iphyman/spunk-dao",
+  "author": "Iphyman",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

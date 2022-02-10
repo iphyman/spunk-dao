@@ -1,0 +1,157 @@
+#pragma version 5
+global GroupSize
+int 1
+==
+bnz main_l4
+global GroupSize
+int 2
+==
+bnz main_l3
+err
+main_l3:
+global GroupSize
+int 2
+<=
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+gtxn 0 CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 0 AssetCloseTo
+global ZeroAddress
+==
+&&
+&&
+gtxn 0 TypeEnum
+int appl
+==
+&&
+gtxn 0 ApplicationID
+int 9000000
+==
+&&
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+gtxn 0 CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 0 AssetCloseTo
+global ZeroAddress
+==
+&&
+gtxn 1 RekeyTo
+global ZeroAddress
+==
+gtxn 1 CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 1 AssetCloseTo
+global ZeroAddress
+==
+&&
+&&
+gtxn 0 TypeEnum
+int pay
+==
+&&
+gtxn 0 Amount
+int 0
+==
+&&
+gtxn 0 Sender
+addr EDXG4GGBEHFLNX6A7FGT3F6Z3TQGIU6WVVJNOXGYLVNTLWDOCEJJ35LWJY
+==
+&&
+gtxn 1 TypeEnum
+int axfer
+==
+&&
+gtxn 1 AssetAmount
+int 0
+==
+&&
+||
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+gtxn 0 CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 0 AssetCloseTo
+global ZeroAddress
+==
+&&
+gtxn 0 TypeEnum
+int appl
+==
+&&
+gtxn 0 ApplicationID
+int 9000000
+==
+&&
+gtxn 1 RekeyTo
+global ZeroAddress
+==
+gtxn 1 CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 1 AssetCloseTo
+global ZeroAddress
+==
+&&
+&&
+gtxn 1 TypeEnum
+int axfer
+==
+&&
+||
+b main_l5
+main_l4:
+global GroupSize
+int 2
+<=
+gtxn 0 RekeyTo
+global ZeroAddress
+==
+gtxn 0 CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 0 AssetCloseTo
+global ZeroAddress
+==
+&&
+&&
+gtxn 0 TypeEnum
+int appl
+==
+&&
+gtxn 0 ApplicationID
+int 9000000
+==
+&&
+txn RekeyTo
+global ZeroAddress
+==
+txn Sender
+addr EDXG4GGBEHFLNX6A7FGT3F6Z3TQGIU6WVVJNOXGYLVNTLWDOCEJJ35LWJY
+==
+&&
+txn TypeEnum
+int axfer
+==
+txn TypeEnum
+int pay
+==
+||
+&&
+||
+main_l5:
+return
